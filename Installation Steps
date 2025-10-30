@@ -1,0 +1,74 @@
+Install Ubuntu 22.04 
+
+Install Dependencies (common for PX4 & ArduPilot)
+
+Open terminal and enter ctrl+alt+t ( Copy and paste in terminal command enter in italic format) 
+
+
+    1) sudo apt update
+
+    2) sudo apt install -y git python3 python3-pip python3-venv \
+    python3-numpy python3-opencv python3-yaml \
+    build-essential cmake ninja-build genromfs \
+    libeigen3-dev libxml2-utils \
+    protobuf-compiler libprotobuf-dev \
+    libusb-1.0-0-dev libqt5gui5 libqt5core5a libqt5widgets5 \
+    qtbase5-dev qtdeclarative5-dev libqt5serialport5-dev \
+    libgazebo11-dev gazebo11
+
+Install Mavproxy and dronekit
+
+pip install pymavlink mavproxy dronekit
+
+
+Install QGroundControl (QGC)
+
+Ubuntu Linux 22.04
+Please refer to the link- https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html
+Supported versions: Ubuntu 22.04, 24.04:
+Ubuntu comes with a serial modem manager that interferes with any robotics related use of a serial port (or USB serial). Before installing QGroundControl you should remove the modem manager and grant yourself permissions to access the serial port. You also need to install GStreamer in order to support video streaming.
+    1. On the command prompt, enter:
+    1) sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+
+    2) sudo apt install libfuse2 -y
+
+    3) sudo apt install libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor-dev -y
+To install QGroundControl:
+    1. Download QGroundControl-x86_64.AppImage.
+    2. Make the AppImage executable
+chmod +x QGroundControl-<arch>.AppImage
+    1. Run QGroundControl Either double-click the AppImage in your file manager or launch it from a terminal:
+./QGroundControl-<arch>.AppImage
+ Install PX4 Autopilot (SITL)
+Clone and set up PX4:
+
+    1) cd ~
+
+    2) git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+
+    3) cd PX4-Autopilot
+
+    4) bash Tools/setup/ubuntu.sh
+
+Build SITL + Gazebo (optional visual sim)
+
+make px4_sitl_default gazebo
+
+
+
+ Install ArduPilot SITL
+
+cd ~
+git clone https://github.com/ArduPilot/ardupilot.git
+cd ardupilot
+git submodule update --init --recursive
+Tools/environment_install/install-prereqs-ubuntu.sh -y
+
+Then reload your environment:
+
+. ~/.profile
+
+Run ArduCopter SITL:
+
+cd ~/ardupilot/ArduCopter
+sim_vehicle.py -v ArduCopter -f gazebo-iris --console --map
