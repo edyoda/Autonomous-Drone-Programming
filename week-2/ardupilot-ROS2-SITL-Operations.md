@@ -58,18 +58,21 @@ microxrceddsgen -help
 And finally, build your workspace:
 
 ```cd ~/ardu_ws
-colcon build --packages-up-to ardupilot_dds_tests ```
+colcon build --packages-up-to ardupilot_dds_tests
+```
 
 6. If the build fails, when you request help, please re-run the build in verbose mode like so:
 
-```colcon build --packages-up-to ardupilot_dds_tests --event-handlers=console_cohesion+ ```
+```colcon build --packages-up-to ardupilot_dds_tests --event-handlers=console_cohesion+
+```
 
 7. If you’d like to test your ArduPilot ROS 2 installation, run:
 
 ```cd ~/ardu_ws
 source ./install/setup.bash
 colcon test --executor sequential --parallel-workers 0 --base-paths src/ardupilot --event-handlers=console_cohesion+
-colcon test-result --all --verbose```
+colcon test-result --all --verbose
+```
 
 ###ROS 2 with SITL
 
