@@ -49,7 +49,7 @@ each with their corresponding `SYSID_THISMAV` parameter value ie
 - `default_params/copter-2.parm` should contain `SYSID_THISMAV 2`
 - `default_params/copter-3.parm` should contain `SYSID_THISMAV 3`
 
-### Example copter-1.parm File
+### Example copter-1.parm File and add SYSID_THISMAV 1 similarly for vehicle 2 SYSID_THISMAV 2
 ```
 FRAME_CLASS 1
 FRAME_TYPE  1
@@ -63,7 +63,7 @@ RNGFND1_TYPE 1
 RNGFND1_SCALING 10
 RNGFND1_PIN 0
 RNGFND1_MAX_CM 5000
-##SYSID_THISMAV 1
+SYSID_THISMAV 1
 ```
 
 
