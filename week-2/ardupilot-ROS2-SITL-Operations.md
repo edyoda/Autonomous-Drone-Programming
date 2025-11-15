@@ -74,7 +74,7 @@ colcon test --executor sequential --parallel-workers 0 --base-paths src/ardupilo
 colcon test-result --all --verbose
 ```
 
-###ROS 2 with SITL
+### ROS 2 with SITL
 
 
 8. Once ROS2 is correctly installed, and SITL is also installed, source your workspace and launch ArduPilot SITL with ROS 2!
