@@ -58,7 +58,7 @@ microxrceddsgen -help
 And finally, build your workspace:
 
 ```cd ~/ardu_ws
-colcon build --packages-up-to ardupilot_dds_tests```
+colcon build --packages-up-to ardupilot_dds_tests ```
 
 6. If the build fails, when you request help, please re-run the build in verbose mode like so:
 
