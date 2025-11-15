@@ -62,7 +62,7 @@ colcon build --packages-up-to ardupilot_dds_tests ```
 
 6. If the build fails, when you request help, please re-run the build in verbose mode like so:
 
-```colcon build --packages-up-to ardupilot_dds_tests --event-handlers=console_cohesion+ '''
+```colcon build --packages-up-to ardupilot_dds_tests --event-handlers=console_cohesion+ ```
 
 7. If you’d like to test your ArduPilot ROS 2 installation, run:
 
