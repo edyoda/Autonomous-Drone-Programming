@@ -34,7 +34,9 @@ make px4_sitl gz_x500
 
 Install from a snap package on Ubuntu using the following command:
 
-```sudo snap install micro-xrce-dds-agent --edge
+```
+sudo snap install micro-xrce-dds-agent --edge
+
 ```
 
 To start the agent with settings for connecting to the uXRCE-DDS client running on the simulator (note that the command name is different than if you build the agent locally):
