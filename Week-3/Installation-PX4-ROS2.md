@@ -6,7 +6,9 @@ The PX4 source code is stored on Github in the PX4/PX4-Autopilot repository.
 
 To get the very latest (main branch) version onto your computer, enter the following command into a terminal:
 
-```git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+```
+git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+
 ```
 
 2. Run the ubuntu.sh with no arguments (in a bash shell) to install everything:
